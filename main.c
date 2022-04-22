@@ -33,9 +33,9 @@ int main(int argc, char *argv[]) {
 		struct linkLayer ll;
 		sprintf(ll.serialPort, "%s", argv[1]);
 		ll.role = 0;
-		ll.baudRate = 19200;
+		ll.baudRate = 9600;
 		ll.numTries = 3;
-		ll.timeOut = 20;
+		ll.timeOut = 3;
 		struct timespec startTime;
 		clock_gettime(CLOCK_REALTIME, &startTime);
     		if(llopen(ll)==-1) {
@@ -108,9 +108,9 @@ int main(int argc, char *argv[]) {
                 struct linkLayer ll;
                 sprintf(ll.serialPort, "%s", argv[1]);
                 ll.role = 1;
-                ll.baudRate = 19200;
+                ll.baudRate = 9600;
                 ll.numTries = 3;
-                ll.timeOut = 20;
+                ll.timeOut = 3;
                 struct timespec startTime;
 		        clock_gettime(CLOCK_REALTIME, &startTime);
                 if(llopen(ll)==-1) {
@@ -168,4 +168,3 @@ int main(int argc, char *argv[]) {
 	}
 
 }
-
